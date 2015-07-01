@@ -5,6 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ListView
+        android:id="@+id/cycle_list"
+        android:listSelector="@null"
+        android:dividerHeight="0dip"
+        android:cacheColorHint="@null"
         android:layout_width="match_parent"
         android:layout_above="@+id/cycle_layout"
         android:layout_height="match_parent">

@@ -1,16 +1,19 @@
 package com.zbq.beads;
 
 import android.app.Activity;
+import android.view.LayoutInflater;
 import android.view.View;
 
 public abstract class BaseView {
 
 	protected Activity mContext;
 	protected View view;
+	protected LayoutInflater inflater;
 
 	public BaseView(Activity context, int layoutId) {
 		mContext = context;
-		view = mContext.getLayoutInflater().inflate(layoutId, null);
+		inflater = mContext.getLayoutInflater();
+		view = inflater.inflate(layoutId, null);
 		view.setTag(this);
 	}
 
