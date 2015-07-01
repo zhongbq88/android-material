@@ -1,4 +1,4 @@
-package com.poliveira.apps.materialtests;
+package com.zbq.beads;
 
 import android.graphics.drawable.Drawable;
 

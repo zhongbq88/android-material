@@ -1,4 +1,4 @@
-package com.poliveira.apps.materialtests;
+package com.zbq.beads;
 
 /**
  * Created by poliveira on 27/10/2014.

@@ -18,7 +18,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar_actionbar">
 
-        <FrameLayout
+        <com.zbq.beads.ViewContainer
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:clickable="true"
@@ -27,7 +27,7 @@
         <!-- android:layout_marginTop="?android:attr/actionBarSize"-->
         <fragment
             android:id="@+id/fragment_drawer"
-            android:name="com.poliveira.apps.materialtests.NavigationDrawerFragment"
+            android:name="com.zbq.beads.NavigationDrawerFragment"
             android:layout_width="@dimen/navigation_drawer_width"
             android:layout_height="match_parent"
             android:layout_gravity="start"

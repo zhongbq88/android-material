@@ -1,4 +1,4 @@
-package com.poliveira.apps.materialtests;
+package com.zbq.beads;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +36,7 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
     private boolean mUserLearnedDrawer;
     private boolean mFromSavedInstanceState;
     private int mCurrentSelectedPosition;
-
+    List<NavigationItem> navigationItems;
 
     @Nullable
     @Override
@@ -46,13 +47,16 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mDrawerList.setLayoutManager(layoutManager);
         mDrawerList.setHasFixedSize(true);
-
-        final List<NavigationItem> navigationItems = getMenu();
+        navigationItems = getMenu();
         NavigationDrawerAdapter adapter = new NavigationDrawerAdapter(navigationItems);
         adapter.setNavigationDrawerCallbacks(this);
         mDrawerList.setAdapter(adapter);
         selectItem(mCurrentSelectedPosition);
         return view;
+    }
+
+    public NavigationItem getNavigationItem(int position){
+        return navigationItems.get(position);
     }
 
     @Override
@@ -142,9 +146,12 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
 
     public List<NavigationItem> getMenu() {
         List<NavigationItem> items = new ArrayList<NavigationItem>();
-        items.add(new NavigationItem("item 1", getResources().getDrawable(R.drawable.ic_menu_check)));
-        items.add(new NavigationItem("item 2", getResources().getDrawable(R.drawable.ic_menu_check)));
-        items.add(new NavigationItem("item 3", getResources().getDrawable(R.drawable.ic_menu_check)));
+        items.add(new NavigationItem(getString(R.string.app_name), getResources().getDrawable(R.drawable.ic_menu_check)));
+        items.add(new NavigationItem(getString(R.string.pair), getResources().getDrawable(R.drawable.ic_menu_check)));
+        items.add(new NavigationItem(getString(R.string.reminder), getResources().getDrawable(R.drawable.ic_menu_check)));
+        items.add(new NavigationItem(getString(R.string.language), getResources().getDrawable(R.drawable.ic_menu_check)));
+        items.add(new NavigationItem(getString(R.string.time), getResources().getDrawable(R.drawable.ic_menu_check)));
+        items.add(new NavigationItem(getString(R.string.status), getResources().getDrawable(R.drawable.ic_menu_check)));
         return items;
     }
 
