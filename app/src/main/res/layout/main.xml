@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/cycle_layout"
+        android:layout_height="match_parent">
+    </ListView>
+    <LinearLayout
+        android:id="@+id/cycle_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:gravity="center_vertical"
+        android:background="@drawable/radius_blue"
+        android:padding="1dip"
+        android:layout_margin="10dip"
+        android:layout_above="@+id/start"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btn_received"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/left_radius_selector"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/cycle"
+            android:textColor="@color/white"
+            />
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/blue"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_sent"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/right_radius_selector"
+            android:gravity="center"
+            android:singleLine="true"
+             />
+    </LinearLayout>
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/confir_radius_selector"
+        android:text="@string/start"
+        android:textColor="@color/white"
+        android:minWidth="180dip"
+        android:layout_marginBottom="20dip"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+</FrameLayout>
