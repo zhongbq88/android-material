@@ -8,7 +8,6 @@
         <item name="colorAccent">@color/myAccentColor</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-
         <item name="android:windowBackground">@color/myWindowBackground</item>
     </style>
 
@@ -20,5 +19,10 @@
     <style name="ToolBarStyle" parent="">
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
         <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+    <style name="MyCheck_Box" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/check_box_selector</item>
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:textSize">14sp</item>
     </style>
 </resources>

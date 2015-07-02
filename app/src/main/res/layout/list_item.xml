@@ -3,5 +3,10 @@
         android:id="@+id/checkbox"
         android:layout_width="match_parent"
         android:text="@string/start"
+        android:minHeight="35dip"
+        android:button="@drawable/check_box_selector"
+        android:paddingLeft="5dip"
+        android:layout_marginLeft="5dip"
+        android:textColor="@color/gray"
         android:layout_height="wrap_content" >
 </CheckBox>

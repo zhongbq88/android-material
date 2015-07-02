@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button
+        android:id="@+id/search_for_emisbaha"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/confir_radius_selector"
+        android:text="@string/search_for_emisbaha"
+        android:textColor="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dip"
+        android:layout_height="wrap_content" />
+    <ListView
+        android:id="@+id/emisbaha_list"
+        android:listSelector="@null"
+        android:dividerHeight="0dip"
+        android:cacheColorHint="@null"
+        android:padding="7dip"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/pair"
+        android:layout_below="@+id/search_for_emisbaha"
+        android:layout_height="match_parent">
+    </ListView>
+    <Button
+        android:id="@+id/pair"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/confir_radius_selector"
+        android:text="@string/pair"
+        android:textColor="@color/white"
 
-</LinearLayout>
+        android:minWidth="180dip"
+        android:layout_margin="20dip"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

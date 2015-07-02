@@ -11,6 +11,10 @@ public class Pair extends BaseView{
         super(context, layoutId);
     }
 
+    public Pair(Activity context) {
+        super(context, R.layout.pair);
+    }
+
     @Override
     public void OnViewShow() {
 
@@ -20,11 +24,6 @@ public class Pair extends BaseView{
     public void OnViewHide() {
 
     }
-
-    public Pair(Activity context) {
-        super(context, R.layout.pair);
-    }
-
 
 
 

@@ -13,6 +13,8 @@ import android.widget.ListView;
 public class Main extends BaseView {
 
     ListView cycle_list;
+    String[] cycle_array;
+    CycleAdapter cycleAdapter;
 
     public Main(Activity context, int layoutId) {
         super(context, layoutId);
@@ -21,11 +23,14 @@ public class Main extends BaseView {
     public Main(Activity context) {
         super(context, R.layout.main);
         cycle_list = (ListView)view.findViewById(R.id.cycle_list);
+        cycle_array = context.getResources().getStringArray(R.array.cycle_array);
+        cycleAdapter = new CycleAdapter();
+        cycle_list.setAdapter(cycleAdapter);
     }
 
     @Override
     public void OnViewShow() {
-
+        cycleAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -37,7 +42,7 @@ public class Main extends BaseView {
 
         @Override
         public int getCount() {
-            return 0;
+            return cycle_array.length;
         }
 
         @Override
@@ -59,8 +64,9 @@ public class Main extends BaseView {
                 viewHolder.checkBox = (CheckBox) convertView.findViewById(R.id.checkbox);
                 convertView.setTag(viewHolder);
             } else {
-                viewHolder = (ViewHolder) view.getTag();
+                viewHolder = (ViewHolder) convertView.getTag();
             }
+            viewHolder.checkBox.setText(cycle_array[position]);
             return convertView;
         }
     }
