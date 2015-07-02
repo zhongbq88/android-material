@@ -16,4 +16,6 @@
     <string name="set_emisbaha_time">Set E-Misbaha Time</string>
     <string name="send">Send</string>
     <string name="last_counting_status">Last Counting Status</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
 </resources>
